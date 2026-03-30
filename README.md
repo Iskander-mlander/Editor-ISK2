@@ -63,7 +63,7 @@ A professional Python code editor with AI assistance, built with PyQt6.
 - **Plugin System** - Full plugin architecture with discovery, load/unload, activation/deactivation
 - **Plugin API** - Base plugin class with signals, metadata, and lifecycle management
 
-## Architecture
+## Architecture <--- This need a update.
 
 The project follows a modular architecture with clear separation of concerns:
 
