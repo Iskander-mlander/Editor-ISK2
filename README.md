@@ -1,4 +1,5 @@
 # Editor ISK 2.0
+# En construcción / Under construction!
 
 A professional Python code editor with AI assistance, built with PyQt6.
 
