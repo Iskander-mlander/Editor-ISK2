@@ -7,6 +7,7 @@ Cuando no pude hacer un plugin para usar IA en Geany-
   Luego encontre opencode-cli, kilo-cli, y ya no me hizo falta terminar este proyecto.
   
 A professional Python code editor with AI assistance, built with PyQt6.
+<img width="1440" height="869" alt="Captura de pantalla_2026-03-30_22-23-48" src="https://github.com/user-attachments/assets/29bc4cc3-39c3-4698-b846-22905a9d9cb9" />
 
 ## Features
 
@@ -185,5 +186,5 @@ pytest tests/
 | Zoom Reset | Ctrl+0 |
 
 ## License
-
+GPL V3
 See LICENSE file for details.
