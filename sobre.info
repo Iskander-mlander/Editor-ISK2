@@ -1,0 +1,13 @@
+Editor ISK 2.0
+
+A ¿professional? Python code editor.
+
+Features:
+- Syntax highlighting for Python
+- LSP (Language Server Protocol) support
+- AI Assistant integration
+- Git integration
+- Code completion
+- Debugging support
+- Plugin system
+- Multi-language interface

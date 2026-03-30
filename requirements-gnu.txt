@@ -1,0 +1,46 @@
+# Editor ISK - Requirements-gnu
+# =============================
+# Programas y herramientas del sistema necesarias.
+
+# ==========================================
+# Herramientas obligatorias
+# ==========================================
+# git          - Control de versiones (panel Git integrado)
+# bash         - Terminal emulada (PTY) - incluido en la mayoria de distros
+
+# ==========================================
+# Linters y formateadores (pip)
+# ==========================================
+# Se detectan automaticamente; si no estan instalados, las funciones
+# correspondientes se desactivan silenciosamente.
+#
+# pylint       - Analisis estatico de Python        -> pip install pylint
+# flake8       - Verificador de estilo PEP8         -> pip install flake8
+# black        - Formateador de codigo Python       -> pip install black
+# autopep8     - Formateador PEP8 alternativo       -> pip install autopep8
+# shellcheck   - Linter para scripts shell/bash     -> apt install shellcheck
+
+# ==========================================
+# Servidores LSP (Language Server Protocol)
+# ==========================================
+# Se registran automaticamente; si no estan en PATH, la autocompletado /
+# diagnostico para ese lenguaje queda deshabilitado.
+#
+# python-lsp-server (pylsp)  - Python LSP           -> pip install python-lsp-server
+# pyright                    - Python type checker   -> npm install -g pyright
+# typescript-language-server - JS/TS                 -> npm install -g typescript-language-server
+# vscode-json-languageserver - JSON                  -> npm install -g vscode-json-languageserver
+# html-language-server       - HTML                  -> npm install -g html-language-server
+# css-language-server        - CSS/SCSS/LESS         -> npm install -g css-language-server
+# rust-analyzer              - Rust                  -> cargo install rust-analyzer
+# gopls                      - Go                    -> go install golang.org/x/tools/gopls@latest
+# clangd                     - C/C++                 -> apt install clangd
+# jdtls                      - Java                  -> Ver https://github.com/eclipse/eclipse.jdt.ls
+# vls                        - Vue                   -> npm install -g vls
+
+# ==========================================
+# Backends de IA (opcionales)
+# ==========================================
+# Ollama       - Modelos locales de IA               -> https://ollama.com
+#               (el asistente de IA tambien soporta OpenAI y Hugging Face
+#                mediante las librerias Python de requirements.txt)

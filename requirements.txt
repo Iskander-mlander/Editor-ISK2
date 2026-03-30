@@ -1,0 +1,18 @@
+# Editor ISK - Requirements
+# ==========================
+
+# Core dependencies
+PyQt6>=6.5.0
+
+# AI assistant backends
+requests>=2.28.0    # HTTP requests to AI providers (Ollama, custom backends)
+openai>=1.0.0       # OpenAI API integration
+huggingface_hub>=0.19.0  # Hugging Face Inference API and Hub API
+
+# Code formatting
+black>=23.0.0       # Code formatting (primary)
+autopep8>=2.0.0     # Code formatting (PEP8 alternative)
+
+# Development dependencies (optional)
+pytest>=7.0.0       # Testing framework
+pytest-qt>=4.2.0    # Qt testing support
