@@ -1,0 +1,25 @@
+{
+    "name": "requests POST",
+    "trigger": "reqpost",
+    "description": "Petición HTTP POST con requests",
+    "body": [
+        "import requests",
+        "import json",
+        "",
+        "def post_data(url='${1:https://httpbin.org/post}', data=None):",
+        "    if data is None:",
+        "        data = {'${2:key}': '${3:value}'}",
+        "    try:",
+        "        response = requests.post(url, json=data, timeout=${4:10})",
+        "        response.raise_for_status()",
+        "        return response.json()",
+        "    except requests.exceptions.RequestException as e:",
+        "        print(f'Error: {e}')",
+        "        return None",
+        "",
+        "if __name__ == '__main__':",
+        "    result = post_data()",
+        "    print(json.dumps(result, indent=2))"
+    ],
+    "scope": "python"
+}

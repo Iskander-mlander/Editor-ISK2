@@ -1,0 +1,26 @@
+{
+    "name": "Argparse basic",
+    "trigger": "argparse",
+    "description": "CLI con argparse",
+    "body": [
+        "import argparse",
+        "",
+        "def parse_args():",
+        "    parser = argparse.ArgumentParser(description='${1:Descripción del programa}')",
+        "    parser.add_argument('--input', '-i', help='${2:Archivo de entrada}')",
+        "    parser.add_argument('--output', '-o', help='${3:Archivo de salida}')",
+        "    parser.add_argument('--verbose', '-v', action='store_true', help='Modo verboso')",
+        "    return parser.parse_args()",
+        "",
+        "def main():",
+        "    args = parse_args()",
+        "    if args.verbose:",
+        "        print('Modo verboso activado')",
+        "    print(f'Input: {args.input}')",
+        "    print(f'Output: {args.output}')",
+        "",
+        "if __name__ == '__main__':",
+        "    main()"
+    ],
+    "scope": "python"
+}

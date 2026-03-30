@@ -1,0 +1,23 @@
+{
+    "name": "Read binary file",
+    "trigger": "readbin",
+    "description": "Lee archivo binario",
+    "body": [
+        "def read_binary_file(filepath='${1:archivo.bin}'):",
+        "    try:",
+        "        with open(filepath, 'rb') as f:",
+        "            data = f.read()",
+        "            print(f'Leídos {len(data)} bytes')",
+        "            return data",
+        "    except FileNotFoundError:",
+        "        print(f'Archivo no encontrado: {filepath}')",
+        "        return None",
+        "    except Exception as e:",
+        "        print(f'Error: {e}')",
+        "        return None",
+        "",
+        "if __name__ == '__main__':",
+        "    read_binary_file()"
+    ],
+    "scope": "python"
+}

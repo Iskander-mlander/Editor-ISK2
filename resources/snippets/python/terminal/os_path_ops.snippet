@@ -1,0 +1,26 @@
+{
+    "name": "OS path operations",
+    "trigger": "ospath",
+    "description": "Operaciones comunes con rutas",
+    "body": [
+        "import os",
+        "from pathlib import Path",
+        "",
+        "# Rutas",
+        "cwd = os.getcwd()",
+        "script_dir = Path(__file__).parent",
+        "",
+        "# Crear directorio",
+        "os.makedirs('${1:nueva_carpeta}', exist_ok=True)",
+        "",
+        "# Listar archivos",
+        "files = [f for f in os.listdir('.') if os.path.isfile(f)]",
+        "dirs = [d for d in os.listdir('.') if os.path.isdir(d)]",
+        "",
+        "# Recorrer árbol",
+        "for root, dirs, files in os.walk('${2:.}'):",
+        "    for file in files:",
+        "        print(os.path.join(root, file))"
+    ],
+    "scope": "python"
+}

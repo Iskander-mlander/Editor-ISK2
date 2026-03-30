@@ -1,0 +1,28 @@
+{
+    "name": "FastAPI app minimal",
+    "trigger": "fastapi",
+    "description": "Aplicación FastAPI mínima",
+    "body": [
+        "from fastapi import FastAPI",
+        "from pydantic import BaseModel",
+        "import uvicorn",
+        "",
+        "app = FastAPI(title='${1:Mi API}')",
+        "",
+        "class Item(BaseModel):",
+        "    name: str",
+        "    description: str | None = None",
+        "",
+        "@app.get('/')",
+        "async def root():",
+        "    return {'message': '¡Hola Mundo!'}",
+        "",
+        "@app.post('/items/')",
+        "async def create_item(item: Item):",
+        "    return item",
+        "",
+        "if __name__ == '__main__':",
+        "    uvicorn.run(app, host='${2:0.0.0.0}', port=${3:8000})"
+    ],
+    "scope": "python"
+}

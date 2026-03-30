@@ -1,0 +1,22 @@
+{
+    "name": "Write binary file",
+    "trigger": "writebin",
+    "description": "Escribe archivo binario",
+    "body": [
+        "def write_binary_file(filepath='${1:salida.bin}', data=None):",
+        "    if data is None:",
+        "        data = b'${2:\\x00\\x01\\x02}'",
+        "    try:",
+        "        with open(filepath, 'wb') as f:",
+        "            f.write(data)",
+        "        print(f'Archivo binario guardado: {filepath} ({len(data)} bytes)')",
+        "        return True",
+        "    except Exception as e:",
+        "        print(f'Error: {e}')",
+        "        return False",
+        "",
+        "if __name__ == '__main__':",
+        "    write_binary_file()"
+    ],
+    "scope": "python"
+}

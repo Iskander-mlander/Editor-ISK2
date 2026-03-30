@@ -1,0 +1,31 @@
+{
+    "name": "JSON read/write",
+    "trigger": "jsonrw",
+    "description": "Lee y escribe archivos JSON",
+    "body": [
+        "import json",
+        "",
+        "def read_json(filepath='${1:datos.json}'):",
+        "    try:",
+        "        with open(filepath, 'r', encoding='utf-8') as f:",
+        "            return json.load(f)",
+        "    except Exception as e:",
+        "        print(f'Error: {e}')",
+        "        return None",
+        "",
+        "def write_json(data, filepath='${2:salida.json}'):",
+        "    try:",
+        "        with open(filepath, 'w', encoding='utf-8') as f:",
+        "            json.dump(data, f, indent=2, ensure_ascii=False)",
+        "        print(f'JSON guardado: {filepath}')",
+        "        return True",
+        "    except Exception as e:",
+        "        print(f'Error: {e}')",
+        "        return False",
+        "",
+        "if __name__ == '__main__':",
+        "    data = {'${3:clave}': '${4:valor}'}",
+        "    write_json(data)"
+    ],
+    "scope": "python"
+}

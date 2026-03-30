@@ -1,0 +1,19 @@
+{
+    "name": "socket client",
+    "trigger": "sockcli",
+    "description": "Cliente TCP básico con socket",
+    "body": [
+        "import socket",
+        "",
+        "def tcp_client(host='${1:localhost}', port=${2:8080}):",
+        "    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:",
+        "        s.connect((host, port))",
+        "        s.sendall(b'${3:Hola servidor}')",
+        "        data = s.recv(1024)",
+        "        print(f'Recibido: {data.decode()}')",
+        "",
+        "if __name__ == '__main__':",
+        "    tcp_client()"
+    ],
+    "scope": "python"
+}

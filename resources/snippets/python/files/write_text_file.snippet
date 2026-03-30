@@ -1,0 +1,20 @@
+{
+    "name": "Write text file",
+    "trigger": "writetxt",
+    "description": "Escribe archivo de texto",
+    "body": [
+        "def write_text_file(filepath='${1:salida.txt}', content='${2:contenido a escribir}'):",
+        "    try:",
+        "        with open(filepath, 'w', encoding='utf-8') as f:",
+        "            f.write(content)",
+        "        print(f'Archivo guardado: {filepath}')",
+        "        return True",
+        "    except Exception as e:",
+        "        print(f'Error: {e}')",
+        "        return False",
+        "",
+        "if __name__ == '__main__':",
+        "    write_text_file()"
+    ],
+    "scope": "python"
+}

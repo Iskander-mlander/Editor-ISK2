@@ -1,0 +1,23 @@
+{
+    "name": "Read text file",
+    "trigger": "readtxt",
+    "description": "Lee archivo de texto línea por línea",
+    "body": [
+        "def read_text_file(filepath='${1:archivo.txt}'):",
+        "    try:",
+        "        with open(filepath, 'r', encoding='utf-8') as f:",
+        "            content = f.read()",
+        "            print(content)",
+        "            return content",
+        "    except FileNotFoundError:",
+        "        print(f'Archivo no encontrado: {filepath}')",
+        "        return None",
+        "    except Exception as e:",
+        "        print(f'Error: {e}')",
+        "        return None",
+        "",
+        "if __name__ == '__main__':",
+        "    read_text_file()"
+    ],
+    "scope": "python"
+}

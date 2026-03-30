@@ -1,0 +1,26 @@
+{
+    "name": "Flask app minimal",
+    "trigger": "flask",
+    "description": "Aplicación Flask mínima",
+    "body": [
+        "from flask import Flask, jsonify, request",
+        "",
+        "app = Flask(__name__)",
+        "",
+        "@app.route('/')",
+        "def home():",
+        "    return jsonify({'message': '¡Hola Mundo!'})",
+        "",
+        "@app.route('/api/data', methods=['GET', 'POST'])",
+        "def api_data():",
+        "    if request.method == 'GET':",
+        "        return jsonify({'data': [1, 2, 3]})",
+        "    else:",
+        "        data = request.get_json()",
+        "        return jsonify({'received': data}), 201",
+        "",
+        "if __name__ == '__main__':",
+        "    app.run(debug=True, host='${1:0.0.0.0}', port=${2:5000})"
+    ],
+    "scope": "python"
+}
