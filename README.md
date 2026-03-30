@@ -1,6 +1,11 @@
 # Editor ISK 2.0
 # En construcción / Under construction!
 
+Cuando no pude hacer un plugin para usar IA en Geany- 
+  mientras que otros editores usan tecnologias pesadas para mi viejo PC,-
+  decidi hacer un intento de editor liviano con acceso a la IA.
+  Luego encontre opencode-cli, kilo-cli, y ya no me hizo falta terminar este proyecto.
+  
 A professional Python code editor with AI assistance, built with PyQt6.
 
 ## Features
